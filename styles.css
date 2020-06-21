@@ -11,6 +11,11 @@ img {
     display: block;
 }
 
+p {
+    color: #fff;
+    font-size: 25px;
+}
+
 h1,
 h2,
 h3 {
@@ -110,4 +115,72 @@ nav a:focus {
     nav li {
         margin: 0.5em 0;
     }
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.parallax::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg1::after {
+    background-image: url(/static/iphone.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg2::after {
+    background-image: url(/static/react.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg3::after {
+    background-image: url(/static/reacti_native.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width:675px) {
+    .bg {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.contact {
+    padding: 0 auto;
+    margin: 0 auto;
 }
