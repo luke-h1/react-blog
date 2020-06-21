@@ -1,3 +1,1 @@
-[ ] - design nav bar 
-[ ] - add parallax effect 
-[ ] - add footer 
+[ ] - design nav bar [ ] - add parallax effect [ ] - add footer
